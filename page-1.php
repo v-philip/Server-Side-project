@@ -3,30 +3,27 @@ require_once "header.php"?>
 <?php
 require_once('database.php');
 
-$queryProducts = 'SELECT * FROM movies';
+$queryProducts = 'SELECT * FROM airlines';
 $statement = $db->prepare($queryProducts);
 $statement->execute();
-$movies = $statement->fetchAll();
+$airlines = $statement->fetchAll();
 $statement->closeCursor();
 ?>  
 <main class="container">
   <div class="starter-template text-center">
   <table>
             <tr>
-                <th>title</th>
-                <th>Director</th>
-                <th>Age Rating</th>
-                <th>Delete</th>
+                <th>Airline name</th>
+                
             </tr>
 
-            <?php foreach ($movies as $movie) : ?>
+            <?php foreach ($airlines as $airline) : ?>
             <tr>
-                <td><?php echo $movie['title']; ?></td>
-                <td><?php echo $movie['director']; ?></td>
-                <td class="right"><?php echo $movie['age_rating']; ?></td>
+                <td><?php echo $airline['airline_name']; ?></td>
+              
                 <td><form action="delete_product.php" method="post">
-                    <input type="hidden" name="movie_Id"
-                           value="<?php echo $movie['movie_Id']; ?>">
+                    <input type="hidden" name="airline_id"
+                           value="<?php echo $movie['airline_id']; ?>">
                     <input type="submit" value="Delete">
                 </form></td>
             </tr>
