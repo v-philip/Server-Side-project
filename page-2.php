@@ -2,6 +2,7 @@
 require_once "header.php"?>
 
 
+<main class="contianer">
 <h1>Contact us</h1>
 <form method="POST" name="contactform" action="contact-form-handler.php"> 
 <p>
