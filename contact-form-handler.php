@@ -1,5 +1,5 @@
 <?php
-
+require_once "database.php";
 $errors = '';
 $myemail = 'D00243412@student.dkit.ie';// <-----Put your DkIT email address here.
 if(empty($_POST['name'])  ||
@@ -26,6 +26,7 @@ $email_address))
     $errors .= "\n Error: Invalid email address";
 }
 
+
 if( empty($errors))
 {
         $to = $myemail;
@@ -35,8 +36,13 @@ if( empty($errors))
 
         mail($to,$email_subject,$email_body,$headers);
         //redirect to the 'thank you' page
-        header('Location: contact-form-thank-you.html');
+        header('Location: page-1.php');
 }
+
+$queryProducts2 = "Insert into contact_form values ('$email_address', '$name', '$message') ";
+$db->query($queryProducts2);
+
+
 ?>
 <!DOCTYPE HTML>
 <html>

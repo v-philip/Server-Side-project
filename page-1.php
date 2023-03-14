@@ -11,12 +11,7 @@ $statement->closeCursor();
 ?>  
 
 
-<?php
-// Set session variables
 
-$_SESSION["SelectedAirline"] = "";
-echo "Session variables are set.";
-?>
 <main class="container">
   
 
