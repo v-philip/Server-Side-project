@@ -66,7 +66,7 @@ $airlines2 = $result;
             </tr>
         </table>
     </div>
-    <a href="page-1.php"  class="btn btn-primary stretched-link">Back to Home</a>
+    <a href="page-1.php"  class="btn btn-primary">Back to Home</a>
 
 
 </main><!-- /.container -->
