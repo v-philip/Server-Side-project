@@ -2,14 +2,14 @@
 require_once('database.php');
 
 // Get IDs
-$product_id = filter_input(INPUT_POST, 'product_id', FILTER_VALIDATE_INT);
+$flight = filter_input(INPUT_POST, 'flight_id', FILTER_VALIDATE_INT);
 
 // Delete the product from the database
 if ($product_id != false) {
-    $query = 'DELETE FROM flights :
-              WHERE productID = :product_id';
+    $query = 'DELETE FROM depature_schedule
+              WHERE flight_id = :flight_id';
     $statement = $db->prepare($query);
-    $statement->bindValue(':product_id', $product_id);
+    $statement->bindValue(':flight_id', $flight);
     $success = $statement->execute();
     $statement->closeCursor();    
 }
