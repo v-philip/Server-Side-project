@@ -2,19 +2,19 @@
 require_once "header.php"?>
 
 <main class="container">
-<h1>Contact us</h1>
+<h1>Login</h1>
 <form method="POST" name="login" action="login.php"> 
 <p>
-<label for='email'>Email:</label> <br>
-<input type="text" name="email">
+<label  class="form-label" for='email'>Email:</label> <br>
+<input type="text" name="email" id="form1Example1" class="form-control">
 </p>
 <p>
-<label for='password'>Password:</label> <br>
-<input type="text" name="password"> <br>
+<label class="form-label"  for='password'>Password:</label> <br>
+<input type="text" name="password" id="form1Example1" class="form-control"> <br>
 </p>
 <p>
 </p>
-<input type="submit" value="Submit"><br>
+<input type="submit" value="Submit"  class="btn btn-outline-primary"><br>
 </form>
 
 </main><!-- /.container -->
