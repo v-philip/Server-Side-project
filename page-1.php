@@ -14,11 +14,12 @@ $statement->closeCursor();
 
 <main class="container">
   
-
-            <div class="card-group" style = "display :flex">
+<div class="row">
+  
+            <!-- <div class="card-deck" > -->
             <?php foreach ($airlines as $airline) : ?>
-              
-            <div class="card"  style="width: 18rem;">
+              <div class="col">
+            <div class="card border-secondary mb-3" style="max-width: 18rem;">
             <img  class="card-img-top" src="<?php echo $airline['image_link'];?>">
             <div class = "card-body">
             <h1><?php echo $airline['airline_name']; ?></h1>
@@ -35,11 +36,12 @@ $statement->closeCursor();
                 </tr> -->
             </div>
             </div>
-            
+            </div>
             <?php endforeach; ?>
+            
+            
             </div>
             
-  
   <script src="js/bootstrap.bundle.min.js"></script>
 </main><!-- /.container -->
     

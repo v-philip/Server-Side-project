@@ -3,24 +3,26 @@ require_once "header.php"?>
 
 
 <main class="contianer">
-<h1>Contact us</h1>
-<form method="POST" name="contactform" action="contact-form-handler.php"> 
-  <div  class="form-group row">
-<p>
-<label for='name' class="col-sm-2 col-form-label">Your Name:</label> <br>
-<input type="text" name="name">
-</p>
-<p>
-<label for='email' class="col-sm-2 col-form-label">Email Address:</label> <br>
-<input type="text" name="email"> <br>
-</p>
-<p>
-<label for='message' class="col-sm-2 col-form-label">Message:</label> <br>
-<textarea name="message"></textarea>
-</p>
-<input type="submit" value="Submit"><br>
+<h1>Feedback</h1>
+
+<form method="POST" name="contactform" action="contact-form-handler.php" class="mx-auto" > 
+  <div  class="form-group row  w-50 p-3" style="background-color: #eee">
+    <p>
+    <label for='name' class="form-label">Your Name:</label> <br>
+    <input type="text" name="name" id="form1Example1" class="form-control" >
+    </p>
+    <p>
+    <label for='email'  class="form-label">Email Address:</label> <br>
+    <input type="text" required name="email" id="form1Example1" class="form-control"> <br>
+    </p>
+    <p>
+    <label for='message'  class="form-label">Message:</label> <br>
+    <textarea name="message" id="form1Example1" class="form-control"></textarea>
+    </p>
+<input type="submit" value="Submit" class="btn btn-outline-primary"><br>
 </form>
 </div>
+
 <script language="JavaScript">
 var frmvalidator  = new Validator("contactform");
 frmvalidator.addValidation("name","req","Please provide your name"); 

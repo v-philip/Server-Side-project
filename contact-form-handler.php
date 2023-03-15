@@ -52,8 +52,10 @@ $db->query($queryProducts2);
 
 <body>
 <!-- This page is displayed only if there is some error -->
+
 <?php
 echo nl2br($errors);
+echo 'a href="page-2.php">Go back</a>';
 ?>
 </body>
 </html>
