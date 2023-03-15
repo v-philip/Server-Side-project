@@ -4,7 +4,7 @@ require_once "header.php"?>
 require_once('database.php');
 $fff= $_GET["subject"]; 
 
-$conn = mysqli_connect("localhost","root","","test2");
+global $conn;
 
 $queryProducts = "SELECT a.flight_id, a.arrival_time, a.airport_id FROM arrival_schedule a JOIN
 flights f ON a.flight_id=f.flight_id 
