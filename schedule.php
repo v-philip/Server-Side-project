@@ -26,7 +26,7 @@ $airlines2 = $result;
 
 ?> 
 <main class="contianer">
-    <div>
+    <div class="container">
         <h1> Arrival Schedule</h1>
         
         <table  class="table table-hover">
@@ -52,7 +52,7 @@ $airlines2 = $result;
 <br>
 <br>
 <br>
-    <div>
+    <div class="container">
         <h1>Depature Schedule</h2>
         <table class="table table-hover table-dark">
             <tr>
@@ -70,8 +70,9 @@ $airlines2 = $result;
             <?php endforeach; ?>
             </tr>
         </table>
+        <a href="page-1.php"  class="btn btn-primary">Back to Home</a>
     </div>
-    <a href="page-1.php"  class="btn btn-primary">Back to Home</a>
+    
 
 
 </main><!-- /.container -->

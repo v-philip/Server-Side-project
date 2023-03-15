@@ -34,13 +34,14 @@ if( empty($errors))
         $email_body = "You have received a new message. ".
         " Here are the details:\n Name: $name \n Email: $email_address \n Message \n $message";
 
+        $queryProducts2 = "Insert into contact_form values ('$email_address', '$name', '$message') ";
+        $db->query($queryProducts2);
         mail($to,$email_subject,$email_body,$headers);
         //redirect to the 'thank you' page
         header('Location: page-1.php');
 }
 
-$queryProducts2 = "Insert into contact_form values ('$email_address', '$name', '$message') ";
-$db->query($queryProducts2);
+
 
 
 ?>
@@ -54,8 +55,12 @@ $db->query($queryProducts2);
 <!-- This page is displayed only if there is some error -->
 
 <?php
+require_once(
+"header.php"
+);
 echo nl2br($errors);
-echo 'a href="page-2.php">Go back</a>';
+echo '<br>
+<a href="page-2.php">Go back</a>';
 ?>
 </body>
 </html>
