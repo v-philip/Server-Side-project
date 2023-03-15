@@ -6,7 +6,7 @@ $product_id = filter_input(INPUT_POST, 'product_id', FILTER_VALIDATE_INT);
 
 // Delete the product from the database
 if ($product_id != false) {
-    $query = 'DELETE FROM products
+    $query = 'DELETE FROM flights :
               WHERE productID = :product_id';
     $statement = $db->prepare($query);
     $statement->bindValue(':product_id', $product_id);
@@ -15,4 +15,4 @@ if ($product_id != false) {
 }
 
 // Display the Product List page
-include('index.php');
+include('page-1.php');

@@ -8,6 +8,8 @@ $statement = $db->prepare($queryProducts);
 $statement->execute();
 $airlines = $statement->fetchAll();
 $statement->closeCursor();
+
+
 ?>  
 
 
