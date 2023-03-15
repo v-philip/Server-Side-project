@@ -5,16 +5,14 @@ require_once "header.php"?>
 <h1>Contact us</h1>
 <form method="POST" name="login" action="login.php"> 
 <p>
-<label for='name'>Email:</label> <br>
-<input type="text" name="name">
+<label for='email'>Email:</label> <br>
+<input type="text" name="email">
 </p>
 <p>
-<label for='email'>Password:</label> <br>
-<input type="text" name="email"> <br>
+<label for='password'>Password:</label> <br>
+<input type="text" name="password"> <br>
 </p>
 <p>
-<label for='message'>Message:</label> <br>
-<textarea name="message"></textarea>
 </p>
 <input type="submit" value="Submit"><br>
 </form>

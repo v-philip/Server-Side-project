@@ -40,7 +40,12 @@ session_start();
               </li> 
               <li class="nav-item">
                 <a class="nav-link" aria-current="page" href="page-3.php">Login</a>
-              </li>
+              </li><?php if(!empty($_SESSION["user"])){echo
+              '<li class="nav-item">
+                <a class="nav-link" aria-current="page" href="logout.php">Register</a>
+              </li>';}
+              ?>
+
             </ul>
           </span>
         </div>
