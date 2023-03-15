@@ -1,3 +1,4 @@
 <?php
-$_SESSION['user'] = '';
+$_SESSION['user'] = null;
+session_unset();
 require('page-1.php');

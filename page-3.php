@@ -1,7 +1,11 @@
 <?php
 require_once "header.php"?>
+<br>
+<br>
 
-<main class="container">
+
+
+<main class="container bg-light text-dark w-50 p-3">
 <h1>Login</h1>
 <form method="POST" name="login" action="login.php"> 
 <p>

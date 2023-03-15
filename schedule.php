@@ -66,12 +66,13 @@ $airlines2 = $result;
                     <td><?php echo $airlined['flight_id'];?></td>
                     <td><?php echo $airlined['airport_id'];?></td>
                     <td><?php echo $airlined['departure_time'];?></td>
-                    <?php if(!empty($_SESSION['user']) )
+                    <!-- <td><?php echo $_SESSION['user']['email'];?></td> -->
+                    <!-- <?php if(!empty($_SESSION['user']) )
                     echo'<td><form action="delete_airline.php" method="post">
                     <input type="hidden" name="airline_Id"
                            value="">
                     <input type="submit" value="Delete">
-                </form></td>'?>
+                </form></td>'?> -->
                 </tr>
             <?php endforeach; ?>
             </tr>

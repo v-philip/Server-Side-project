@@ -2,11 +2,11 @@
 require_once "header.php"?>
 
 
-<main class="contianer">
+<main class="contianer bg-light text-dark w-50 p-3">
 <h1>Feedback</h1>
 
-<form method="POST" name="contactform" action="contact-form-handler.php" class="w-50 p-3" > 
-  <div  class="form-group row  w-50 p-3" style="background-color: #eee">
+<form method="POST" name="contactform" action="contact-form-handler.php"  > 
+  
     <p>
     <label for='name' class="form-label">Your Name:</label> <br>
     <input type="text" name="name" id="form1Example1" class="form-control" >
@@ -21,7 +21,7 @@ require_once "header.php"?>
     </p>
 <input type="submit" value="Submit" class="btn btn-outline-primary"><br>
 </form>
-</div>
+
 
 <script language="JavaScript">
 var frmvalidator  = new Validator("contactform");

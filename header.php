@@ -38,13 +38,18 @@ session_start();
               <li class="nav-item">
                 <a class="nav-link" aria-current="page" href="page-2.php">Feedback</a>
               </li> 
-              <li class="nav-item">
+              <!-- <li class="nav-item">
                 <a class="nav-link" aria-current="page" href="page-3.php">Login</a>
-              </li><?php if(!empty($_SESSION["user"])){echo
+              </li> -->
+              <?php if(!empty($_SESSION['user'])){echo
               '<li class="nav-item">
-                <a class="nav-link" aria-current="page" href="logout.php">Register</a>
-              </li>';}
-              ?>
+                <a class="nav-link" aria-current="page" href="logout.php">logout</a>
+              </li>';
+            }
+            else{echo'<li class="nav-item">
+              <a class="nav-link" aria-current="page" href="page-3.php">Login</a>
+            </li>';}
+            ?>
 
             </ul>
           </span>
