@@ -5,7 +5,7 @@ require_once "header.php"?>
 <main class="contianer">
 <h1>Feedback</h1>
 
-<form method="POST" name="contactform" action="contact-form-handler.php" class="mx-auto" > 
+<form method="POST" name="contactform" action="contact-form-handler.php" class="w-50 p-3" > 
   <div  class="form-group row  w-50 p-3" style="background-color: #eee">
     <p>
     <label for='name' class="form-label">Your Name:</label> <br>

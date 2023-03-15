@@ -25,23 +25,28 @@ $result = $conn->query($queryProducts2);
 $airlines2 = $result;
 
 ?> 
-<main>
+<main class="contianer">
     <div>
         <h1> Arrival Schedule</h1>
         
-        <table class="table">
+        <table  class="table table-hover">
+            <thead>
             <tr>
                 <th scope="col">Flight Number</th>
                 <th scope="col">Arriving from</th>
                 <th scope="col">Arrival Time</th>
             </tr>
+            </thead>
+            <tbody>
             <?php foreach ($airlines as $airline) : ?>
+                
             <tr>
                 <td><?php echo $airline['flight_id'];?></td>
                 <td><?php echo $airline['airport_id'];?></td>
                 <td><?php echo $airline['arrival_time'];?></td>
             </tr>
             <?php endforeach; ?>
+            </tbody>
         </table>
     </div>
 <br>
@@ -49,7 +54,7 @@ $airlines2 = $result;
 <br>
     <div>
         <h1>Depature Schedule</h2>
-        <table class="table table-dark">
+        <table class="table table-hover table-dark">
             <tr>
                 <th scope="col">Flight Number</th>
                 <th scope="col">Departing to</th>
