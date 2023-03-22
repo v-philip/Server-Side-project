@@ -35,20 +35,27 @@ $airlines2 = $result;
                 <th scope="col">Flight Number</th>
                 <th scope="col">Arriving from</th>
                 <th scope="col">Arrival Time</th>
+                
             </tr>
             </thead>
             <tbody>
             <?php foreach ($airlines as $airline) : ?>
-                
+             
             <tr>
                 <td><?php echo $airline['flight_id'];?></td>
                 <td><?php echo $airline['airport_id'];?></td>
                 <td><?php echo $airline['arrival_time'];?></td>
+                
             </tr>
             <?php endforeach; ?>
+           
             </tbody>
         </table>
+        <?php if(!empty($_SESSION['user'])) echo'
+                <a class="btn btn-primary" type="button" href="addArrival.php">Add Arrival</a>'
+                ?>
     </div>
+    
 <br>
 <br>
 <br>
@@ -59,6 +66,8 @@ $airlines2 = $result;
                 <th scope="col">Flight Number</th>
                 <th scope="col">Departing to</th>
                 <th scope="col">Arrival Time</th>
+                
+                ?>
             </tr>
             <tr>
             <?php foreach ($airlines2 as $airlined) : ?>
@@ -67,21 +76,20 @@ $airlines2 = $result;
                     <td><?php echo $airlined['airport_id'];?></td>
                     <td><?php echo $airlined['departure_time'];?></td>
                     <!-- <td><?php echo $_SESSION['user']['email'];?></td> -->
-                    <!-- <?php if(!empty($_SESSION['user']) )
-                    echo'<td><form action="delete_airline.php" method="post">
-                    <input type="hidden" name="airline_Id"
-                           value="">
-                    <input type="submit" value="Delete">
-                </form></td>'?> -->
+                    
                 </tr>
             <?php endforeach; ?>
             </tr>
         </table>
-        <a href="page-1.php"  class="btn btn-primary">Back to Home</a>
+        <?php if(!empty($_SESSION['user'])) echo'
+                <a class="btn btn-primary" type="button" href="addDeparture.php">Add Arrival</a>'
+                ?>
     </div>
     
 
-
+    <div class="card-footer text-muted">
+©--Philip Philip Vadakekala, 2023 
+  </div>
 </main><!-- /.container -->
     <script src="js/bootstrap.bundle.min.js"></script>
   </body>

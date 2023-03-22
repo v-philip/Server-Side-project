@@ -8,6 +8,14 @@ if(empty($_POST['name'])  ||
 {
     $errors .= "\n Error: all fields are required";
 }
+
+if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+  $errors .= "\n Error: Invalid email format";
+}
+
+
+
+
 $headers = "";
 // Important: Create email headers to avoid spam folder
 $headers .= 'From: '.$myemail."\r\n".
@@ -18,6 +26,7 @@ $headers .= 'From: '.$myemail."\r\n".
 $name = $_POST['name'];
 $email_address = $_POST['email'];
 $message = $_POST['message'];
+$address = $_POST['address'];
 
 if (!preg_match(
 "/^[_a-z0-9-]+(\.[_a-z0-9-]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,3})$/i",
@@ -32,9 +41,11 @@ if( empty($errors))
         $to = $myemail;
         $email_subject = "Contact form submission: $name";
         $email_body = "You have received a new message. ".
-        " Here are the details:\n Name: $name \n Email: $email_address \n Message \n $message";
+        " Here are the details:\n Name: $name \n Email: $email_address \n 
+        Message \n $message
+        Address \n $address";
 
-        $queryProducts2 = "Insert into contact_form values ('$email_address', '$name', '$message') ";
+        $queryProducts2 = "Insert into contact_form values ('$email_address', '$name', '$message', '$address') ";
         $db->query($queryProducts2);
         mail($to,$email_subject,$email_body,$headers);
         //redirect to the 'thank you' page

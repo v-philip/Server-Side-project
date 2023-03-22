@@ -13,6 +13,7 @@ session_start();
     <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
     <meta name="generator" content="Hugo 0.80.0">
     <title>Starter Template · Bootstrap v5.0</title>
+
     <!-- Bootstrap core CSS -->
 <link href="css/bootstrap.min.css" rel="stylesheet">
     <!-- Custom styles for this template -->
@@ -35,15 +36,22 @@ session_start();
               <li class="nav-item">
                 <a class="nav-link" aria-current="page" href="page-1.php">Airline</a>
               </li>
-              <li class="nav-item">
+              <?php if(empty($_SESSION['user'])){echo
+              '<li class="nav-item">
                 <a class="nav-link" aria-current="page" href="page-2.php">Feedback</a>
-              </li> 
+              </li>';
+            }
+            else{null;}
+            ?>
               <!-- <li class="nav-item">
                 <a class="nav-link" aria-current="page" href="page-3.php">Login</a>
               </li> -->
               <?php if(!empty($_SESSION['user'])){echo
               '<li class="nav-item">
                 <a class="nav-link" aria-current="page" href="logout.php">logout</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" aria-current="page" href="allFlights.php">All Flights</a>
               </li>';
             }
             else{echo'<li class="nav-item">

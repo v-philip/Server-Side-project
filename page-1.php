@@ -27,29 +27,30 @@ $statement->closeCursor();
             <!-- <div class="card-deck" > -->
             <?php foreach ($airlines as $airline) : ?>
               <div class="col">
-            <div class="card border-secondary mb-3" style="max-width: 18rem;">
+            <div class="card border-secondary mb-3" style="max-width: 18rem height:25rems">
             <img  class="card-img-top" src="<?php echo $airline['image_link'];?>">
             <div class = "card-body">
             <h1><?php echo $airline['airline_name']; ?></h1>
                 <p><?php echo $airline['airline_id']; ?></p>
                 <a  class="btn btn-primary" type="button" href = "schedule.php?subject=<?php echo $airline['airline_id']; ?>"> See Schedule </a>
-                <p><?php echo $_SESSION["SelectedAirline"] ?></p>
-                <!-- <tr>
+                <!-- <p><?php echo $_SESSION["SelectedAirline"] ?></p> -->
+                
+                <tr>
                     <td></td>
-                    <td><form action="delete_airline.php" method="post">
-                        <input type="hidden" name="airline_Id"
-                               value="">
-                        <input type="submit" value="Delete">
-                    </form></td>
-                </tr> -->
+                    
+                </tr>
             </div>
             </div>
             </div>
             <?php endforeach; ?>
             
-            
+            <?php if(!empty($_SESSION['user'])) echo'
+                <a  class="btn btn-primary" type="button" href = "addAirline.php"> add airline  </a>'
+                ?>
             </div>
-            
+            <div class="card-footer text-muted">
+©--Philip Philip Vadakekala, 2023 
+  </div>
   <script src="js/bootstrap.bundle.min.js"></script>
 </main><!-- /.container -->
     

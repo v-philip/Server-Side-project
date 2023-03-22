@@ -1,7 +1,24 @@
-#Flight Schedule Web Application
+# ServerSide CA2 -Airline Shedule 
 
-This is a web application designed to display a schedule of flights for Dublin ariport. It is built using HTML, CSS, and and php.
+# Preview
 
+![THE_APP]([images/prev1.png](https://github.com/v-philip/Server-Side-project/blob/master/Screenshot%202023-03-22%20044818.png))
+
+
+## Admin Login Details
+Email: admin@gmail.com
+Password: 123qwe!@#QWE
+
+
+
+## Application Features
+- The admin can add a airlne to the database
+- The admin can add a flight to the database
+- The admin can delete a flight from the database
+- The admin can delete a flgiht from the database
+- Delete phone records from the database
+
+# View the running application
 
 
 The link to the website is here
