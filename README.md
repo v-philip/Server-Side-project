@@ -2,7 +2,7 @@
 
 # Preview
 
-![THE_APP]([images/prev1.png](https://github.com/v-philip/Server-Side-project/blob/master/Screenshot%202023-03-22%20044818.png))
+![THE_APP](https://github.com/v-philip/Server-Side-project/blob/master/Screenshot%202023-03-22%20044818.png)
 
 
 ## Admin Login Details
