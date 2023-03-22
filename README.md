@@ -6,7 +6,7 @@
 
 
 ## Admin Login Details
-Email: admin@gmail.com
+Email: admin@admin.com
 Password: 123qwe!@#QWE
 
 
