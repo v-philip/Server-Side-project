@@ -22,5 +22,5 @@ Password: 123qwe!@#QWE
 
 
 The link to the website is here
- [click here](https://mysql07.comp.dkit.ie/D00243412/AIRLINE/starter-template/page-1.php)
+ [click here](https://mysql07.comp.dkit.ie/D00243412/AIRLINE/starter-template/starter-template/page-1.php)
  
